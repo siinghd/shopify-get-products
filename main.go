@@ -56,6 +56,7 @@ func getProducts() {
 		defer file.Close()
 
 		writer := csv.NewWriter(file)
+		writer.Comma = '|'
 		defer writer.Flush()
 
 		header := []string{"SKU", "EAN", "Title", "Description", "Tags", "Price", "Soggeto iv o no", "Quantità", "Immagini"}
